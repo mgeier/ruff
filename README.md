@@ -1865,7 +1865,7 @@ by `ignore`.
 
 **Default value**: `[]`
 
-**Type**: `Vec<CheckCodePrefix>`
+**Type**: `Vec<DiagnosticCodePrefix>`
 
 **Example usage**:
 
@@ -1884,7 +1884,7 @@ by `select`.
 
 **Default value**: `[]`
 
-**Type**: `Vec<CheckCodePrefix>`
+**Type**: `Vec<DiagnosticCodePrefix>`
 
 **Example usage**:
 
@@ -1959,7 +1959,7 @@ A list of check code prefixes to consider autofix-able.
 
 **Default value**: `["A", "ANN", "ARG", "B", "BLE", "C", "D", "E", "ERA", "F", "FBT", "I", "ICN", "N", "PGH", "PLC", "PLE", "PLR", "PLW", "Q", "RET", "RUF", "S", "T", "TID", "UP", "W", "YTT"]`
 
-**Type**: `Vec<CheckCodePrefix>`
+**Type**: `Vec<DiagnosticCodePrefix>`
 
 **Example usage**:
 
@@ -2031,7 +2031,7 @@ specific prefixes.
 
 **Default value**: `[]`
 
-**Type**: `Vec<CheckCodePrefix>`
+**Type**: `Vec<DiagnosticCodePrefix>`
 
 **Example usage**:
 
@@ -2090,7 +2090,7 @@ when considering any matching files.
 
 **Default value**: `{}`
 
-**Type**: `HashMap<String, Vec<CheckCodePrefix>>`
+**Type**: `HashMap<String, Vec<DiagnosticCodePrefix>>`
 
 **Example usage**:
 
@@ -2154,7 +2154,7 @@ specific prefixes.
 
 **Default value**: `["E", "F"]`
 
-**Type**: `Vec<CheckCodePrefix>`
+**Type**: `Vec<DiagnosticCodePrefix>`
 
 **Example usage**:
 
@@ -2274,7 +2274,7 @@ A list of check code prefixes to consider un-autofix-able.
 
 **Default value**: `[]`
 
-**Type**: `Vec<CheckCodePrefix>`
+**Type**: `Vec<DiagnosticCodePrefix>`
 
 **Example usage**:
 
