@@ -3,7 +3,7 @@
 use anyhow::Result;
 use clap::Args;
 use itertools::Itertools;
-use ruff::registry::{CheckCategory, DiagnosticCode};
+use ruff::registry::{DiagnosticCode, DiagnosticOrigin};
 use strum::IntoEnumIterator;
 
 use crate::utils::replace_readme_section;
@@ -25,7 +25,7 @@ pub fn main(cli: &Cli) -> Result<()> {
     // Generate the table string.
     let mut table_out = String::new();
     let mut toc_out = String::new();
-    for check_category in CheckCategory::iter() {
+    for check_category in DiagnosticOrigin::iter() {
         let codes_csv: String = check_category.codes().iter().map(AsRef::as_ref).join(", ");
         table_out.push_str(&format!("### {} ({codes_csv})", check_category.title()));
         table_out.push('\n');

@@ -93,7 +93,7 @@ pub fn {snake_case(name)}(checker: &mut Checker) {{}}
                 elif index == 3:
                     # `DiagnosticCode#category()`
                     indent = line.split(f"// {plugin}")[0]
-                    fp.write(f"{indent}DiagnosticCode::{code} => CheckCategory::{pascal_case(plugin)},")
+                    fp.write(f"{indent}DiagnosticCode::{code} => Origin::{pascal_case(plugin)},")
                     fp.write("\n")
 
                 elif index == 4:

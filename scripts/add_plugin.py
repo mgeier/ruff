@@ -85,23 +85,23 @@ mod tests {
                 fp.write(f"{indent}{pascal_case(plugin)},")
                 fp.write("\n")
 
-            elif line.strip() == 'CheckCategory::Ruff => "Ruff-specific rules",':
-                indent = line.split('CheckCategory::Ruff => "Ruff-specific rules",')[0]
-                fp.write(f'{indent}CheckCategory::{pascal_case(plugin)} => "{plugin}",')
+            elif line.strip() == 'Origin::Ruff => "Ruff-specific rules",':
+                indent = line.split('Origin::Ruff => "Ruff-specific rules",')[0]
+                fp.write(f'{indent}Origin::{pascal_case(plugin)} => "{plugin}",')
                 fp.write("\n")
 
-            elif line.strip() == "CheckCategory::Ruff => vec![DiagnosticCodePrefix::RUF],":
-                indent = line.split("CheckCategory::Ruff => vec![DiagnosticCodePrefix::RUF],")[0]
+            elif line.strip() == "Origin::Ruff => vec![DiagnosticCodePrefix::RUF],":
+                indent = line.split("Origin::Ruff => vec![DiagnosticCodePrefix::RUF],")[0]
                 fp.write(
-                    f"{indent}CheckCategory::{pascal_case(plugin)} => vec![\n"
+                    f"{indent}Origin::{pascal_case(plugin)} => vec![\n"
                     f'{indent}    todo!("Fill-in prefix after generating codes")\n'
                     f"{indent}],"
                 )
                 fp.write("\n")
 
-            elif line.strip() == "CheckCategory::Ruff => None,":
-                indent = line.split("CheckCategory::Ruff => None,")[0]
-                fp.write(f"{indent}CheckCategory::{pascal_case(plugin)} => " f'Some(("{url}", &Platform::PyPI)),')
+            elif line.strip() == "Origin::Ruff => None,":
+                indent = line.split("Origin::Ruff => None,")[0]
+                fp.write(f"{indent}Origin::{pascal_case(plugin)} => " f'Some(("{url}", &Platform::PyPI)),')
                 fp.write("\n")
 
             fp.write(line)
